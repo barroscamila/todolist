@@ -77,7 +77,7 @@ section h1 {
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.200);
 }
 
-#addTodo {
+#newTodoContainer {
     display: flex;
     justify-content: center;
     margin-bottom: 23px;
@@ -122,6 +122,9 @@ section h1 {
 }
 
 #todoList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 420px;
     height: 300px;
 
@@ -130,6 +133,21 @@ section h1 {
     border-radius: 5px;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.300);
 }
+
+.todoArea {
+    margin: 8px 8px 0px 8px;
+    padding-left: 15px;
+    padding-top: 18px;
+    width: 400px;
+    height: 50px;
+
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.200);
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
 
 footer p {
     margin-top: 1.5em;

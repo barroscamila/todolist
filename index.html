@@ -6,27 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todo list.</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <main>
         <section>   
             <div id="themeBtnContainer">
+                <!-- button para alternar entre os temas dark e light -->
                 <button id="themeBtn">dark</button>
             </div>
 
             <h1>todo list.</h1>
 
-            <div id="addTodo">
-                <input type="text" name="newTodo" id="newTodo">
+            <div id="newTodoContainer">
+                <!-- campo para adicionar novo todo -->
+                <input type="text" name="newTodo" id="newTodo" autofocus>
                 <button type="submit" id="newTodoBtn">new</button>
             </div>
 
             <div id="todoListContainer">
                 <div id="todoList">
-
+                    <!-- uma nova div para cada novo todo... -->
                 </div>
             </div>
-            
         </section>
 
         <footer>
