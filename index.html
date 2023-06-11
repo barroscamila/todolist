@@ -6,27 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todo list.</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="index.js" defer></script>
 </head>
 <body>
     <main>
         <section>   
             <div id="themeBtnContainer">
-                <!-- button para alternar entre os temas dark e light -->
                 <button id="themeBtn">dark</button>
             </div>
 
             <h1>todo list.</h1>
 
             <div id="newTodoContainer">
-                <!-- campo para adicionar novo todo -->
                 <input type="text" name="newTodo" id="newTodo" autofocus>
                 <button type="submit" id="newTodoBtn">new</button>
             </div>
 
             <div id="todoListContainer">
                 <div id="todoList">
-                    <!-- uma nova div para cada novo todo... -->
+                    <div class="newTodo" style="display: none;">
+                        <span id="doneIcon" class="material-symbols-outlined">
+                            done
+                        </span>
+                        <span id="todoTxt">
+                            Atividade para fazer...
+                        </span>
+                        <span id="deleteIcon" class="material-symbols-outlined">
+                            delete
+                        </span>
+                    </div>
+
+                    <div class="newTodo" style="display: none;">
+                        <span id="doneIconDeleted" class="material-symbols-outlined">
+                            done
+                        </span>
+                        <span id="todoTxtDeleted">
+                            Atividade deletada...
+                        </span>
+                        <span id="deleteIcon" class="material-symbols-outlined">
+                            delete
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>

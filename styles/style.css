@@ -122,6 +122,7 @@ section h1 {
 }
 
 #todoList {
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,20 +135,52 @@ section h1 {
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.300);
 }
 
-.todoArea {
-    margin: 8px 8px 0px 8px;
-    padding-left: 15px;
-    padding-top: 18px;
-    width: 400px;
-    height: 50px;
+.newTodo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px 8px  4px 8px;
+    padding: 8px;
+    width: 380px;
+    height: 40px;
 
+    
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.200);
-    font-size: 1em;
-    font-weight: bold;
-    color: var(--dark-color);
 }
 
+#doneIcon {
+    color: rgba(0, 0, 0, 0.500);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#todoTxt {
+    padding-left: 8px;
+    width: 300px;
+    color: var(--dark-color);
+    text-align: left;
+
+}
+
+#deleteIcon {
+    color: var(--red-color);
+    cursor: pointer;
+}
+
+#doneIconDeleted {
+    color: var(--green-color);
+    font-weight: bold;
+}
+
+#todoTxtDeleted {
+    padding-left: 8px;
+    width: 300px;
+    color: var(--dark-color);
+    opacity: 50%;
+    text-align: left;
+    text-decoration: line-through;
+}
 
 footer p {
     margin-top: 1.5em;
