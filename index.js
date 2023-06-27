@@ -1,8 +1,7 @@
-/* LEMBRAR DE FAZER:
-    - Faveicon (html)
-    - Alterar barra do navegador
-    - Alerta perguntando se tem certeza que quer deletar
-    - Check para alternar entre feito e não feito
+/* 
+    FALTANDO:
+    - função de alterar tema dark/light
+    - media queries
 */
 
 // SELECIONANDO ELEMENTOS
@@ -37,19 +36,26 @@ function addNewTodo(todo) {
 
 function checkTodo(icon) {
     const answer = confirm("Tem certeza que deseja marcar este item como finalizado?")
+    const todoChecked = icon.parentNode
+    todoChecked.children[1].id = "doneTxtClicked"
+    
     if (answer) {
-        icon.id = "doneIconDeleted"
-
+        icon.id = "doneIconClicked"
     }
 }
 
-function deleteTodo() {
+function deleteTodo(icon) {
     const answer = confirm("Tem certeza que deseja deletar este item da lista?")
+    const todoToDelete = icon.parentNode
+
     if (answer) {
-        // console.log("clicou em deletar!")
+        todoToDelete.remove()
     }
 }
 
+function changeTheme() {
+    
+}
 
 // EVENTOS
 
@@ -67,7 +73,17 @@ document.addEventListener("click", (e) => {
     }
 
     if (iconClicked.id === "deleteIcon") {
-        deleteTodo()
+        deleteTodo(iconClicked)
     }
+})
+
+document.querySelector("#themeBtn").addEventListener("click", (e) => { 
+    const currentTheme = e.target.value
+    console.log(currentTheme)
+
+    if (currentTheme === "dark") {
+        // função para alterar tema
+    }
+
 })
 

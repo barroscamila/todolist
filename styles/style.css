@@ -133,6 +133,19 @@ section h1 {
     border: none;
     border-radius: 5px;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.300);
+
+    scrollbar-width: 1px;
+}
+
+#todoList::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+#todoList::-webkit-scrollbar-thumb {
+    background-color: #333B40;
+    border-radius: 10px;
+    border: 3px solid #D9D9D9;
 }
 
 .newTodo {
@@ -160,7 +173,6 @@ section h1 {
     width: 300px;
     color: var(--dark-color);
     text-align: left;
-
 }
 
 #deleteIcon {
@@ -168,12 +180,12 @@ section h1 {
     cursor: pointer;
 }
 
-#doneIconDeleted {
+#doneIconClicked {
     color: var(--green-color);
     font-weight: bold;
 }
 
-#todoTxtDeleted {
+#doneTxtClicked {
     padding-left: 8px;
     width: 300px;
     color: var(--dark-color);
@@ -194,3 +206,6 @@ footer p a {
     text-decoration: none;
     color: var(--light-color);
 }
+
+
+
