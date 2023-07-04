@@ -1,9 +1,3 @@
-/* 
-    FALTANDO:
-    - função de alterar tema dark/light
-    - media queries
-*/
-
 // SELECIONANDO ELEMENTOS
 
 let list = document.querySelector("#todoList")
@@ -37,10 +31,10 @@ function addNewTodo(todo) {
 function checkTodo(icon) {
     const answer = confirm("Tem certeza que deseja marcar este item como finalizado?")
     const todoChecked = icon.parentNode
-    todoChecked.children[1].id = "doneTxtClicked"
     
     if (answer) {
         icon.id = "doneIconClicked"
+        todoChecked.children[1].id = "doneTxtClicked"
     }
 }
 
@@ -51,10 +45,6 @@ function deleteTodo(icon) {
     if (answer) {
         todoToDelete.remove()
     }
-}
-
-function changeTheme() {
-    
 }
 
 // EVENTOS
@@ -75,15 +65,5 @@ document.addEventListener("click", (e) => {
     if (iconClicked.id === "deleteIcon") {
         deleteTodo(iconClicked)
     }
-})
-
-document.querySelector("#themeBtn").addEventListener("click", (e) => { 
-    const currentTheme = e.target.value
-    console.log(currentTheme)
-
-    if (currentTheme === "dark") {
-        // função para alterar tema
-    }
-
 })
 

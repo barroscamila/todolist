@@ -38,35 +38,10 @@ section {
     flex-direction: column;
     padding: 2.5em;
     width: 550px;
-    height: 600px;
+    height: 560px;
 
     border: 1px solid rgba(217, 217, 217, 0.100);
     border-radius: 4px;
-}
-
-#themeBtnContainer {
-    display: flex;
-    justify-content: right;
-
-    box-shadow: blanchedalmond;
-}
-
-#themeBtn {
-    margin-bottom: 10px;
-    width: 70px;
-    height: 30px;
-
-    background-color: transparent;
-    border: 2px solid rgba(217, 217, 217, 0.700);
-    border-radius: 5px;
-    color: var(--light-color);
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.200);
-}
-
-#themeBtn:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-    transform: 0.6s;
 }
 
 section h1 {
